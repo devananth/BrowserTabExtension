@@ -19,9 +19,9 @@ const Greetings = () => {
   }
 
   return (
-    <h3>
+    <h1 className="txt-5xl">
       Good {wish} , {userName}
-    </h3>
+    </h1>
   );
 };
 
