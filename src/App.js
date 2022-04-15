@@ -3,6 +3,8 @@ import { useState, useEffect } from "react";
 import { Welcome, UserPage } from "./pages";
 import { useData } from "./context";
 
+const UNSPLASH_API_URL = `https://api.unsplash.com/photos/random/?client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}&&orientation=landscape&&query=mountains%20dark`;
+
 function App() {
   const {
     dataState: { userName },
@@ -11,13 +13,10 @@ function App() {
   const [imageUrl, setImageUrl] = useState(null);
 
   useEffect(() => {
-    fetch(
-      `https://api.unsplash.com/photos/random/?client_id=XqByhaz8qx069KZ_7Kk528zhO_02RDftaH3ioB8y1No&&orientation=landscape&&query=mountains%20dark`
-    )
-      .then((res) => res.json())
-      .then((x) => {
-        console.log(x);
-        setImageUrl(x.urls.regular);
+    fetch(UNSPLASH_API_URL)
+      .then((response) => response.json())
+      .then((data) => {
+        setImageUrl(data.urls.regular);
       });
   }, []);
 
