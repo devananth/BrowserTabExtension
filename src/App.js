@@ -17,6 +17,9 @@ function App() {
       .then((response) => response.json())
       .then((data) => {
         setImageUrl(data.urls.regular);
+      })
+      .catch((error) => {
+        console.log("Something went wrong ! Refresh the page after 1 min");
       });
   }, []);
 

@@ -22,6 +22,9 @@ const Weather = () => {
         };
 
         setWeatherData(value);
+      })
+      .catch((error) => {
+        console.log("Something went wrong ! Refresh the page after 1 min");
       });
   };
 
