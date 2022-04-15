@@ -9,16 +9,17 @@ const DataProvider = ({ children }) => {
   const [dataState, dataDispatch] = useReducer(dataReducer, initialDataState);
 
   useEffect(() => {
-    const [userName, mainFocus] = [
+    const [userName, mainFocus, todos] = [
       localStorage.getItem("userName"),
       localStorage.getItem("mainFocus"),
+      JSON.parse(localStorage.getItem("todos")),
     ];
 
     const date = new Date();
 
     dataDispatch({
       type: DATA_ACTIONS.SET_INITIAL_DATA,
-      payload: { userName, mainFocus },
+      payload: { userName, mainFocus, todos },
     });
 
     dataDispatch({
