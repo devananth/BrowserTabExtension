@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { useData } from "../context";
 import { DATA_ACTIONS } from "../utils";
-import { Greetings, Time } from "../components";
+import { Greetings, Time, Weather, Quote } from "../components";
 
 const UserPage = () => {
   const [mainFocus, setMainFocus] = useState("");
 
   const { dataState, dataDispatch } = useData();
-
-  console.log(dataState);
 
   const focusHandler = (event) => {
     const focus = event.target.value.trim();
@@ -26,6 +24,7 @@ const UserPage = () => {
 
   return (
     <section className="d-flex col xy-center">
+      <Weather />
       <Time />
       <Greetings />
       {dataState.mainFocus === null ? (
@@ -42,8 +41,9 @@ const UserPage = () => {
           />
         </form>
       ) : (
-        <h4>My Main Focus is : {dataState.mainFocus} </h4>
+        <h4 className="txt-5xl">My Main Focus is : {dataState.mainFocus} </h4>
       )}
+      <Quote />
     </section>
   );
 };

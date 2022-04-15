@@ -23,14 +23,14 @@ const Time = () => {
         secs: date.getSeconds(),
       },
     });
-  }, [time]);
+  }, []);
 
   const { hours, mins, secs } = time;
 
   return (
-    <h1>{`${getFormattedvalue(hours)} : ${getFormattedvalue(
-      mins
-    )} : ${getFormattedvalue(secs)}`}</h1>
+    <h1 className="txt-5xl txt-bold">{`${getFormattedvalue(
+      hours
+    )} : ${getFormattedvalue(mins)} : ${getFormattedvalue(secs)}`}</h1>
   );
 };
 
