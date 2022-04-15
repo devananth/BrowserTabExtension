@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useData } from "../context";
 import { DATA_ACTIONS } from "../utils";
-import { Greetings, Time, Weather, Quote } from "../components";
+import { Greetings, Time, Weather, Quote, Todo } from "../components";
 
 const UserPage = () => {
   const [mainFocus, setMainFocus] = useState("");
@@ -44,6 +44,7 @@ const UserPage = () => {
         <h4 className="txt-5xl">My Main Focus is : {dataState.mainFocus} </h4>
       )}
       <Quote />
+      <Todo />
     </section>
   );
 };
