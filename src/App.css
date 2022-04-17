@@ -1,6 +1,9 @@
 @import url("https://lens-ui.netlify.app/style.css");
 @import url("https://use.fontawesome.com/releases/v5.12.1/css/all.css");
 
+:root{
+  --black-color : #000000	;
+}
 .App{
   min-height: 95vh;
   display: flex;
@@ -24,4 +27,8 @@
   right : 1%;
 }
 
+.quote{
+  position: absolute;
+  bottom: 10%;
+}
 

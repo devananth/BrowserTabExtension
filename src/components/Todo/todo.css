@@ -1,0 +1,26 @@
+.todo__container{
+    width : 20rem;
+    background-color: var(--black-color);
+    color : var(--white-color);
+    position: absolute;
+    top : 30%;
+    right : 1%;
+    max-height: 25rem;
+}
+
+.todo__list{
+    height : 15rem;
+    overflow-y: auto;
+} 
+
+input[type="checkbox"]{
+    width: 2.5rem;
+    font-size: 1.5rem;
+}
+
+
+.todo__container .btn{
+    background-color: var(--white-color);
+    margin : var(--sp-0-5);
+    margin-left : 3rem;
+}

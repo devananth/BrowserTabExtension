@@ -16,6 +16,7 @@ const Welcome = () => {
   const formHandler = (event) => {
     event.preventDefault();
     localStorage.setItem("userName", userName);
+    localStorage.setItem("todosList", JSON.stringify([]));
     dataDispatch({
       type: DATA_ACTIONS.SET_USER_NAME,
       payload: userName,
