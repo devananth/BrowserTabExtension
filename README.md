@@ -8,7 +8,7 @@ An extension to have custom New Tab
 
 ## ![](./lensTabShowcase.gif)
 
-## 🚀 Features
+## Features
 
 - A good user onboarding
 - Display time in 24hr format.
@@ -18,4 +18,4 @@ An extension to have custom New Tab
 - Add your main focus of the day.
 - Add/delete items to todo list
 
-### Live Link : [click here](https://lens-tab.netlify.app/)
+### Live Link : [Lens Tab](https://lens-tab.netlify.app/)
