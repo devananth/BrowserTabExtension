@@ -7,7 +7,7 @@ const getBackgroundImage = async (setImageUrl) => {
       setImageUrl(data.urls.regular);
     })
     .catch((error) => {
-      console.log(
+      console.error(
         "Something went wrong with UNSPLASH API ! Try again after refreshing the page"
       );
     });

@@ -16,7 +16,7 @@ const getWeatherData = async (location, setWeatherData) => {
       setWeatherData(value);
     })
     .catch((error) => {
-      console.log(
+      console.error(
         "Something went wrong with OPEN WEATHER API ! Try again after refreshing the page"
       );
     });
