@@ -13,7 +13,7 @@ const Todo = () => {
   const [todoInput, setTodoInput] = useState("");
 
   const addTodosToLocalStorage = () => {
-    localStorage.setItem("todos", JSON.stringify(todos));
+    localStorage.setItem("todosList", JSON.stringify(todos));
   };
 
   const addTodoHandler = (event) => {

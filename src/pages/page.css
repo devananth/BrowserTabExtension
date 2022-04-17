@@ -8,3 +8,6 @@ input {
     color : white;
 }
 
+label{
+    display: block;
+}

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useData } from "../context";
 import { DATA_ACTIONS } from "../utils";
 import { Greetings, Time, Weather, Quote, Todo } from "../components";
+import "./page.css";
 
 const UserPage = () => {
   const [mainFocus, setMainFocus] = useState("");

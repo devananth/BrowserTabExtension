@@ -9,11 +9,14 @@ const DataProvider = ({ children }) => {
   const [dataState, dataDispatch] = useReducer(dataReducer, initialDataState);
 
   useEffect(() => {
-    const [userName, mainFocus, todos] = [
+    const [userName, mainFocus] = [
       localStorage.getItem("userName"),
       localStorage.getItem("mainFocus"),
-      JSON.parse(localStorage.getItem("todos")),
     ];
+
+    const todosList = localStorage.getItem("todosList");
+
+    const todos = todosList === null ? [] : JSON.parse(todosList);
 
     const date = new Date();
 
