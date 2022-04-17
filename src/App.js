@@ -15,11 +15,12 @@ function App() {
     getBackgroundImage(setImageUrl);
   }, []);
 
+  const backgroundProperty = imageUrl
+    ? `url(${imageUrl}) no-repeat center center/cover`
+    : "black";
+
   return (
-    <div
-      className="App"
-      style={{ background: `url(${imageUrl}) no-repeat center center/cover` }}
-    >
+    <div className="App" style={{ background: backgroundProperty }}>
       {userName === null ? <Welcome /> : <UserPage />}
     </div>
   );
