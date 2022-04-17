@@ -16,7 +16,7 @@ const DataProvider = ({ children }) => {
 
     const todosList = localStorage.getItem("todosList");
 
-    const todos = todosList === null ? [] : JSON.stringify(todosList);
+    const todos = todosList === null ? [] : JSON.parse(todosList);
 
     const date = new Date();
 
