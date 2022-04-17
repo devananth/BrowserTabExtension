@@ -26,13 +26,16 @@ const Welcome = () => {
   return (
     <section className="d-flex col xy-center">
       <h1>Hello , What's your name ?</h1>
-      <form onSubmit={formHandler}>
+      <form onSubmit={formHandler} className="d-flex col xy-center">
         <input
           type="text"
           onChange={nameHandler}
           className="m-2 txt-5xl txt-center"
           value={userName}
         />
+        <button type="submit" onClick={formHandler}>
+          Continue
+        </button>
       </form>
     </section>
   );
