@@ -3,11 +3,20 @@ input {
     border : none;
     outline: 2px solid transparent;
     outline-offset: 2px;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid var(--white-color);
     background: transparent;
-    color : white;
+    color : var(--white-color);
 }
 
 label{
     display: block;
+}
+
+button[type="submit"]{
+    background-color: var(--white-color);
+    color : var(--black-color);
+    padding : .5rem 1rem;
+    font-size : 1.5rem;
+    border-radius : 2rem;
+    font-weight: bold;
 }

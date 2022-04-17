@@ -1,9 +1,7 @@
 const getWeatherData = async (location, setWeatherData) => {
   const { latitude, longitude } = location;
 
-  const apiKey = process.env.REACT_APP_WEATHER_API_KEY;
-
-  const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}`;
+  const WEATHER_API_URL = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=2728244c87e645e190765ebb90367589`;
 
   fetch(WEATHER_API_URL)
     .then((response) => response.json())
@@ -18,7 +16,9 @@ const getWeatherData = async (location, setWeatherData) => {
       setWeatherData(value);
     })
     .catch((error) => {
-      console.log("Something went wrong ! Refresh the page after 1 min");
+      console.error(
+        "Something went wrong with OPEN WEATHER API ! Try again after refreshing the page"
+      );
     });
 };
 

@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  color : white;
+  color : var(--white-color);
 }
 
 .h-100{
