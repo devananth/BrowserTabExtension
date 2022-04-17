@@ -2,8 +2,7 @@ import "./App.css";
 import { useState, useEffect } from "react";
 import { Welcome, UserPage } from "./pages";
 import { useData } from "./context";
-
-const UNSPLASH_API_URL = `https://api.unsplash.com/photos/random/?client_id=${process.env.REACT_APP_UNSPLASH_API_KEY}&&orientation=landscape&&query=mountains%20dark`;
+import { getBackgroundImage } from "./utils";
 
 function App() {
   const {
@@ -13,14 +12,7 @@ function App() {
   const [imageUrl, setImageUrl] = useState(null);
 
   useEffect(() => {
-    fetch(UNSPLASH_API_URL)
-      .then((response) => response.json())
-      .then((data) => {
-        setImageUrl(data.urls.regular);
-      })
-      .catch((error) => {
-        console.log("Something went wrong ! Refresh the page after 1 min");
-      });
+    getBackgroundImage(setImageUrl);
   }, []);
 
   return (
