@@ -9,7 +9,7 @@ const Welcome = () => {
   const { dataDispatch } = useData();
 
   const nameHandler = (event) => {
-    const name = event.target.value;
+    const name = event.target.value.trim();
     setUserName(name);
   };
 
@@ -19,7 +19,7 @@ const Welcome = () => {
     localStorage.setItem("todosList", JSON.stringify([]));
     dataDispatch({
       type: DATA_ACTIONS.SET_USER_NAME,
-      payload: userName.trim(),
+      payload: userName,
     });
   };
 
@@ -33,7 +33,9 @@ const Welcome = () => {
           className="m-2 txt-5xl txt-center"
           value={userName}
         />
-        <button type="submit">Continue</button>
+        <button type="submit" onClick={formHandler}>
+          Continue
+        </button>
       </form>
     </section>
   );

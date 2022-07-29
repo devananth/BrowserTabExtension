@@ -10,7 +10,7 @@ const UserPage = () => {
   const { dataState, dataDispatch } = useData();
 
   const focusHandler = (event) => {
-    const focus = event.target.value;
+    const focus = event.target.value.trim();
     setMainFocus(focus);
   };
 
@@ -19,7 +19,7 @@ const UserPage = () => {
     localStorage.setItem("mainFocus", mainFocus);
     dataDispatch({
       type: DATA_ACTIONS.SET_MAIN_FOCUS,
-      payload: mainFocus.trim(),
+      payload: mainFocus,
     });
   };
 
