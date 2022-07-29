@@ -13,17 +13,21 @@ const Time = () => {
   };
 
   useEffect(() => {
-    const date = new Date();
-    dataDispatch({
-      type: DATA_ACTIONS.SET_TIME,
-      payload: {
-        date: date,
-        hours: date.getHours(),
-        mins: date.getMinutes(),
-        secs: date.getSeconds(),
-      },
-    });
-  }, [dataDispatch]);
+    const timerId = setTimeout(() => {
+      const date = new Date();
+      dataDispatch({
+        type: DATA_ACTIONS.SET_TIME,
+        payload: {
+          date: date,
+          hours: date.getHours(),
+          mins: date.getMinutes(),
+          secs: date.getSeconds(),
+        },
+      });
+    }, 1000);
+
+    return () => clearTimeout(timerId);
+  }, [time]);
 
   const { hours, mins, secs } = time;
 
