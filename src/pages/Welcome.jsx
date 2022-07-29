@@ -33,7 +33,9 @@ const Welcome = () => {
           className="m-2 txt-5xl txt-center"
           value={userName}
         />
-        <button type="submit">Continue</button>
+        <button type="submit" onClick={formHandler}>
+          Continue
+        </button>
       </form>
     </section>
   );

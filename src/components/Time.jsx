@@ -27,7 +27,7 @@ const Time = () => {
     }, 1000);
 
     return () => clearTimeout(timerId);
-  }, [time]);
+  }, [time, dataDispatch]);
 
   const { hours, mins, secs } = time;
 
